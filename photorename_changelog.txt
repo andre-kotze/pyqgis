@@ -1,0 +1,32 @@
+PhotoRename_v1.0.7 (2020-01-28)
+-drop rows with no time data (ABD) to fix IndexError
+-reset indices
+
+1.0.6 currently working
+no times for ABD holes
+
+PhotoRename_v1.0.6 (2020-11-22)
+-fix view vs copy issue
+-minor tweaks
+-timed operations
+-genboard proportions function
+
+PhotoRename_v1.0.5 (2020-11-19)
+-revert to 2 loops
+
+PhotoRename_v1.0.4 (2020-11-18)
+-slice screenlog instead of re-reading
+-end_time and convert timestamps in one loop
+-epic fail
+
+PhotoRename_v1.0.3 (2020-11-18)
+-exception handling for instances of file/folder access
+-show samples with zero photos
+
+PhotoRename_v1.0.2 (2020-11-17)
+-added ascii logo at start
+-change console colour to IMDH theme
+-reading txt files now with 'with'
+-exception handling for opening screenlog and settings files
+
+PhotoRename_v1.0.1
