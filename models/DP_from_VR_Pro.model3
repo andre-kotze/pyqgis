@@ -1,0 +1,152 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="script:DrillingProgram from VesselRoute Pro_1">
+      <Option type="bool" value="true" name="active"/>
+      <Option name="alg_config"/>
+      <Option type="QString" value="script:DrillingProgram from VesselRoute Pro" name="alg_id"/>
+      <Option type="QString" value="DrillingProgram from VesselRoute Pro" name="component_description"/>
+      <Option type="double" value="397" name="component_pos_x"/>
+      <Option type="double" value="170" name="component_pos_y"/>
+      <Option name="dependencies"/>
+      <Option type="QString" value="script:DrillingProgram from VesselRoute Pro_1" name="id"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="DrillingProgram">
+          <Option type="QString" value="script:DrillingProgram from VesselRoute Pro_1" name="child_id"/>
+          <Option type="QString" value="DrillingProgram" name="component_description"/>
+          <Option type="double" value="552" name="component_pos_x"/>
+          <Option type="double" value="233" name="component_pos_y"/>
+          <Option type="Map" name="default_value">
+            <Option type="QString" value="QgsProcessingOutputLayerDefinition" name="class"/>
+            <Option type="Map" name="create_options">
+              <Option type="QString" value="System" name="fileEncoding"/>
+            </Option>
+            <Option type="Map" name="sink">
+              <Option type="bool" value="true" name="active"/>
+              <Option type="int" value="1" name="type"/>
+              <Option type="QString" value="C:/Users/User/Desktop/DrillingProgram.xlsx" name="val"/>
+            </Option>
+          </Option>
+          <Option type="bool" value="true" name="mandatory"/>
+          <Option type="QString" value="DrillingProgram" name="name"/>
+          <Option type="QString" value="DrillingProgram" name="output_name"/>
+        </Option>
+      </Option>
+      <Option type="bool" value="true" name="outputs_collapsed"/>
+      <Option type="bool" value="true" name="parameters_collapsed"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="features">
+          <Option type="Map">
+            <Option type="QString" value="features" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="sites">
+          <Option type="Map">
+            <Option type="QString" value="sites" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="topastracklines">
+          <Option type="Map">
+            <Option type="QString" value="topastracklines" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+        <Option type="List" name="vesselroute">
+          <Option type="Map">
+            <Option type="QString" value="vesselroute" name="parameter_name"/>
+            <Option type="int" value="0" name="source"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option name="modelVariables"/>
+  <Option type="QString" value="SamplingPlanning" name="model_group"/>
+  <Option type="QString" value="DrillingProgram from VesselRoute Pro" name="model_name"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="features">
+      <Option type="List" name="data_types">
+        <Option type="int" value="2"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Features" name="description"/>
+      <Option type="int" value="8" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="features" name="name"/>
+      <Option type="QString" value="vector" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="script:DrillingProgram from VesselRoute Pro_1:DrillingProgram">
+      <Option type="bool" value="true" name="create_by_default"/>
+      <Option type="int" value="-1" name="data_type"/>
+      <Option name="default"/>
+      <Option type="QString" value="DrillingProgram" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="script:DrillingProgram from VesselRoute Pro_1:DrillingProgram" name="name"/>
+      <Option type="QString" value="sink" name="parameter_type"/>
+      <Option type="bool" value="true" name="supports_non_file_outputs"/>
+    </Option>
+    <Option type="Map" name="sites">
+      <Option type="List" name="data_types">
+        <Option type="int" value="0"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Sites" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="sites" name="name"/>
+      <Option type="QString" value="vector" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="topastracklines">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="TOPAS Tracklines" name="description"/>
+      <Option type="int" value="8" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="topastracklines" name="name"/>
+      <Option type="QString" value="vector" name="parameter_type"/>
+    </Option>
+    <Option type="Map" name="vesselroute">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" value="Vessel Route" name="description"/>
+      <Option type="int" value="0" name="flags"/>
+      <Option name="metadata"/>
+      <Option type="QString" value="vesselroute" name="name"/>
+      <Option type="QString" value="vector" name="parameter_type"/>
+    </Option>
+  </Option>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="features">
+      <Option type="QString" value="features" name="component_description"/>
+      <Option type="double" value="506" name="component_pos_x"/>
+      <Option type="double" value="89" name="component_pos_y"/>
+      <Option type="QString" value="features" name="name"/>
+    </Option>
+    <Option type="Map" name="sites">
+      <Option type="QString" value="sites" name="component_description"/>
+      <Option type="double" value="115" name="component_pos_x"/>
+      <Option type="double" value="171" name="component_pos_y"/>
+      <Option type="QString" value="sites" name="name"/>
+    </Option>
+    <Option type="Map" name="topastracklines">
+      <Option type="QString" value="topastracklines" name="component_description"/>
+      <Option type="double" value="338" name="component_pos_x"/>
+      <Option type="double" value="29" name="component_pos_y"/>
+      <Option type="QString" value="topastracklines" name="name"/>
+    </Option>
+    <Option type="Map" name="vesselroute">
+      <Option type="QString" value="vesselroute" name="component_description"/>
+      <Option type="double" value="120" name="component_pos_x"/>
+      <Option type="double" value="60" name="component_pos_y"/>
+      <Option type="QString" value="vesselroute" name="name"/>
+    </Option>
+  </Option>
+</Option>

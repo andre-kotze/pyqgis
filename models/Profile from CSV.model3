@@ -1,0 +1,173 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option name="children" type="Map">
+    <Option name="qgis:createpointslayerfromtable_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="qgis:createpointslayerfromtable"/>
+      <Option name="component_description" type="QString" value="Create points layer from table"/>
+      <Option name="component_pos_x" type="double" value="193"/>
+      <Option name="component_pos_y" type="double" value="162"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="qgis:createpointslayerfromtable_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="parameter_name" type="QString" value="gmprofilecsv"/>
+            <Option name="source" type="int" value="0"/>
+          </Option>
+        </Option>
+        <Option name="MFIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="TARGET_CRS" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="ProjectCrs"/>
+          </Option>
+        </Option>
+        <Option name="XFIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="X"/>
+          </Option>
+        </Option>
+        <Option name="YFIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="Y"/>
+          </Option>
+        </Option>
+        <Option name="ZFIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="Elevation"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:pointstopath_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="qgis:pointstopath"/>
+      <Option name="component_description" type="QString" value="Points to path"/>
+      <Option name="component_pos_x" type="double" value="421"/>
+      <Option name="component_pos_y" type="double" value="372"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="qgis:pointstopath_1"/>
+      <Option name="outputs" type="Map">
+        <Option name="XY_Profile" type="Map">
+          <Option name="child_id" type="QString" value="qgis:pointstopath_1"/>
+          <Option name="component_description" type="QString" value="XY_Profile"/>
+          <Option name="component_pos_x" type="double" value="579"/>
+          <Option name="component_pos_y" type="double" value="429"/>
+          <Option name="default_value" type="invalid"/>
+          <Option name="mandatory" type="bool" value="false"/>
+          <Option name="name" type="QString" value="XY_Profile"/>
+          <Option name="output_name" type="QString" value="OUTPUT"/>
+        </Option>
+      </Option>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="DATE_FORMAT" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value=""/>
+          </Option>
+        </Option>
+        <Option name="GROUP_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="invalid"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="qgis:texttofloat_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+        <Option name="ORDER_FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="ID"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option name="qgis:texttofloat_1" type="Map">
+      <Option name="active" type="bool" value="true"/>
+      <Option name="alg_config"/>
+      <Option name="alg_id" type="QString" value="qgis:texttofloat"/>
+      <Option name="component_description" type="QString" value="Text to float"/>
+      <Option name="component_pos_x" type="double" value="277"/>
+      <Option name="component_pos_y" type="double" value="279"/>
+      <Option name="dependencies"/>
+      <Option name="id" type="QString" value="qgis:texttofloat_1"/>
+      <Option name="outputs"/>
+      <Option name="outputs_collapsed" type="bool" value="true"/>
+      <Option name="parameters_collapsed" type="bool" value="true"/>
+      <Option name="params" type="Map">
+        <Option name="FIELD" type="List">
+          <Option type="Map">
+            <Option name="source" type="int" value="2"/>
+            <Option name="static_value" type="QString" value="ID"/>
+          </Option>
+        </Option>
+        <Option name="INPUT" type="List">
+          <Option type="Map">
+            <Option name="child_id" type="QString" value="qgis:createpointslayerfromtable_1"/>
+            <Option name="output_name" type="QString" value="OUTPUT"/>
+            <Option name="source" type="int" value="1"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option name="modelVariables" type="Map">
+    <Option name="new_variable" type="invalid"/>
+  </Option>
+  <Option name="model_group" type="QString" value="Profiles"/>
+  <Option name="model_name" type="QString" value="Profile from GM csv"/>
+  <Option name="parameterDefinitions" type="Map">
+    <Option name="gmprofilecsv" type="Map">
+      <Option name="data_types" type="List">
+        <Option type="int" value="5"/>
+      </Option>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="GM Profile csv"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="gmprofilecsv"/>
+      <Option name="parameter_type" type="QString" value="vector"/>
+    </Option>
+    <Option name="qgis:pointstopath_1:XY_Profile" type="Map">
+      <Option name="create_by_default" type="bool" value="true"/>
+      <Option name="data_type" type="int" value="1"/>
+      <Option name="default" type="invalid"/>
+      <Option name="description" type="QString" value="XY_Profile"/>
+      <Option name="flags" type="int" value="0"/>
+      <Option name="metadata"/>
+      <Option name="name" type="QString" value="qgis:pointstopath_1:XY_Profile"/>
+      <Option name="parameter_type" type="QString" value="sink"/>
+      <Option name="supports_non_file_outputs" type="bool" value="true"/>
+    </Option>
+  </Option>
+  <Option name="parameters" type="Map">
+    <Option name="gmprofilecsv" type="Map">
+      <Option name="component_description" type="QString" value="gmprofilecsv"/>
+      <Option name="component_pos_x" type="double" value="159"/>
+      <Option name="component_pos_y" type="double" value="56"/>
+      <Option name="name" type="QString" value="gmprofilecsv"/>
+    </Option>
+  </Option>
+</Option>

@@ -1,0 +1,216 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="native:smoothgeometry_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:smoothgeometry"/>
+      <Option type="QString" name="component_description" value="Smooth"/>
+      <Option type="double" name="component_pos_x" value="572"/>
+      <Option type="double" name="component_pos_y" value="516"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:smoothgeometry_1"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="XY_Profile">
+          <Option type="QString" name="child_id" value="native:smoothgeometry_1"/>
+          <Option type="QString" name="component_description" value="XY_Profile"/>
+          <Option type="double" name="component_pos_x" value="708"/>
+          <Option type="double" name="component_pos_y" value="590"/>
+          <Option type="invalid" name="default_value"/>
+          <Option type="bool" name="mandatory" value="false"/>
+          <Option type="QString" name="name" value="XY_Profile"/>
+          <Option type="QString" name="output_name" value="OUTPUT"/>
+        </Option>
+      </Option>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="qgis:pointstopath_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="ITERATIONS">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="MAX_ANGLE">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="180"/>
+          </Option>
+        </Option>
+        <Option type="List" name="OFFSET">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="0.25"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="qgis:pointstopath_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="qgis:pointstopath"/>
+      <Option type="QString" name="component_description" value="Points to path"/>
+      <Option type="double" name="component_pos_x" value="415"/>
+      <Option type="double" name="component_pos_y" value="434"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="qgis:pointstopath_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DATE_FORMAT">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value=""/>
+          </Option>
+        </Option>
+        <Option type="List" name="GROUP_FIELD">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="invalid" name="static_value"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="qgis:setzvalue_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="ORDER_FIELD">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="ID"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="qgis:setzvalue_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="qgis:setzvalue"/>
+      <Option type="QString" name="component_description" value="Set Z value"/>
+      <Option type="double" name="component_pos_x" value="276"/>
+      <Option type="double" name="component_pos_y" value="345"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="qgis:setzvalue_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="saga:profilesfromlines_1"/>
+            <Option type="QString" name="output_name" value="PROFILE"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="Z_VALUE">
+          <Option type="Map">
+            <Option type="QString" name="expression" value="  attribute( $currentfeature , 'Z')"/>
+            <Option type="int" name="source" value="3"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="saga:profilesfromlines_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="saga:profilesfromlines"/>
+      <Option type="QString" name="component_description" value="Profiles from lines"/>
+      <Option type="double" name="component_pos_x" value="187"/>
+      <Option type="double" name="component_pos_y" value="233"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="saga:profilesfromlines_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DEM">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="DEM"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="LINES">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="vesselroute"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NAME">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="&quot;fid&quot;"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SPLIT         ">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="false"/>
+          </Option>
+        </Option>
+        <Option name="VALUES"/>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option type="Map" name="modelVariables">
+    <Option type="invalid" name="new_variable"/>
+  </Option>
+  <Option type="QString" name="model_group" value="SamplingPlanning"/>
+  <Option type="QString" name="model_name" value="Profile from Vessel Route SAGA"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="DEM">
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="DEM"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="DEM"/>
+      <Option type="QString" name="parameter_type" value="raster"/>
+    </Option>
+    <Option type="Map" name="native:smoothgeometry_1:XY_Profile">
+      <Option type="bool" name="create_by_default" value="true"/>
+      <Option type="int" name="data_type" value="1"/>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="XY_Profile"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="native:smoothgeometry_1:XY_Profile"/>
+      <Option type="QString" name="parameter_type" value="sink"/>
+      <Option type="bool" name="supports_non_file_outputs" value="true"/>
+    </Option>
+    <Option type="Map" name="vesselroute">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Vessel Route"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="vesselroute"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
+    </Option>
+  </Option>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="DEM">
+      <Option type="QString" name="component_description" value="DEM"/>
+      <Option type="double" name="component_pos_x" value="126"/>
+      <Option type="double" name="component_pos_y" value="58"/>
+      <Option type="QString" name="name" value="DEM"/>
+    </Option>
+    <Option type="Map" name="vesselroute">
+      <Option type="QString" name="component_description" value="vesselroute"/>
+      <Option type="double" name="component_pos_x" value="651"/>
+      <Option type="double" name="component_pos_y" value="112"/>
+      <Option type="QString" name="name" value="vesselroute"/>
+    </Option>
+  </Option>
+</Option>

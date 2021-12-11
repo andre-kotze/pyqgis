@@ -1,0 +1,159 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="native:loadlayer_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:loadlayer"/>
+      <Option type="QString" name="component_description" value="Load layer into project"/>
+      <Option type="double" name="component_pos_x" value="402"/>
+      <Option type="double" name="component_pos_y" value="383"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:loadlayer_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="saga:profilesfromlines_1"/>
+            <Option type="QString" name="output_name" value="PROFILE"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NAME">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Profiles1"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:loadlayer_2">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:loadlayer"/>
+      <Option type="QString" name="component_description" value="Load layer into project"/>
+      <Option type="double" name="component_pos_x" value="338"/>
+      <Option type="double" name="component_pos_y" value="472"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:loadlayer_2"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="saga:profilesfromlines_1"/>
+            <Option type="QString" name="output_name" value="PROFILES"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NAME">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Profiles2"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="saga:profilesfromlines_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="saga:profilesfromlines"/>
+      <Option type="QString" name="component_description" value="Profiles from lines"/>
+      <Option type="double" name="component_pos_x" value="182"/>
+      <Option type="double" name="component_pos_y" value="283"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="saga:profilesfromlines_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DEM">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="DEM"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="LINES">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="vesselroute"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NAME">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="&quot;ID&quot;"/>
+          </Option>
+        </Option>
+        <Option type="List" name="SPLIT         ">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="false"/>
+          </Option>
+        </Option>
+        <Option name="VALUES"/>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option type="Map" name="modelVariables">
+    <Option type="invalid" name="new_variable"/>
+  </Option>
+  <Option type="QString" name="model_group" value="AKO wip"/>
+  <Option type="QString" name="model_name" value="Profile from Vessel Route v4"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="DEM">
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="DEM"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="DEM"/>
+      <Option type="QString" name="parameter_type" value="raster"/>
+    </Option>
+    <Option type="Map" name="drillingprogram">
+      <Option type="List" name="data_types">
+        <Option type="int" value="0"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="DrillingProgram"/>
+      <Option type="int" name="flags" value="8"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="drillingprogram"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
+    </Option>
+    <Option type="Map" name="vesselroute">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Vessel Route"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="vesselroute"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
+    </Option>
+  </Option>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="DEM">
+      <Option type="QString" name="component_description" value="DEM"/>
+      <Option type="double" name="component_pos_x" value="126"/>
+      <Option type="double" name="component_pos_y" value="58"/>
+      <Option type="QString" name="name" value="DEM"/>
+    </Option>
+    <Option type="Map" name="drillingprogram">
+      <Option type="QString" name="component_description" value="drillingprogram"/>
+      <Option type="double" name="component_pos_x" value="360"/>
+      <Option type="double" name="component_pos_y" value="60"/>
+      <Option type="QString" name="name" value="drillingprogram"/>
+    </Option>
+    <Option type="Map" name="vesselroute">
+      <Option type="QString" name="component_description" value="vesselroute"/>
+      <Option type="double" name="component_pos_x" value="580"/>
+      <Option type="double" name="component_pos_y" value="60"/>
+      <Option type="QString" name="name" value="vesselroute"/>
+    </Option>
+  </Option>
+</Option>

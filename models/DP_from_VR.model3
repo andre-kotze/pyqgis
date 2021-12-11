@@ -1,0 +1,244 @@
+<!DOCTYPE model>
+<Option type="Map">
+  <Option type="Map" name="children">
+    <Option type="Map" name="native:extractvertices_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:extractvertices"/>
+      <Option type="QString" name="component_description" value="Extract vertices"/>
+      <Option type="double" name="component_pos_x" value="377"/>
+      <Option type="double" name="component_pos_y" value="88"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:extractvertices_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="vesselroute"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="native:joinbynearest_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="native:joinbynearest"/>
+      <Option type="QString" name="component_description" value="Join attributes by nearest"/>
+      <Option type="double" name="component_pos_x" value="290"/>
+      <Option type="double" name="component_pos_y" value="182"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="native:joinbynearest_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="DISCARD_NONMATCHING">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="false"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELDS_TO_COPY">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="vertex_index"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="parameter_name" value="sites"/>
+            <Option type="int" name="source" value="0"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT_2">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="native:extractvertices_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="MAX_DISTANCE">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="double" name="static_value" value="5"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEIGHBORS">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="PREFIX">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value=""/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="qgis:deletecolumn_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="qgis:deletecolumn"/>
+      <Option type="QString" name="component_description" value="Drop field(s)"/>
+      <Option type="double" name="component_pos_x" value="422"/>
+      <Option type="double" name="component_pos_y" value="361"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="qgis:deletecolumn_1"/>
+      <Option type="Map" name="outputs">
+        <Option type="Map" name="DrillingProgram">
+          <Option type="QString" name="child_id" value="qgis:deletecolumn_1"/>
+          <Option type="QString" name="component_description" value="DrillingProgram"/>
+          <Option type="double" name="component_pos_x" value="445"/>
+          <Option type="double" name="component_pos_y" value="468"/>
+          <Option type="Map" name="default_value">
+            <Option type="QString" name="class" value="QgsProcessingOutputLayerDefinition"/>
+            <Option type="Map" name="create_options">
+              <Option type="QString" name="fileEncoding" value="System"/>
+            </Option>
+            <Option type="Map" name="sink">
+              <Option type="bool" name="active" value="true"/>
+              <Option type="int" name="type" value="1"/>
+              <Option type="QString" name="val" value="//geo-capture/share/2. BPT/2C/QGIS/DrillingProgramFromVesselRoute/DrillingProgram.xlsx"/>
+            </Option>
+          </Option>
+          <Option type="bool" name="mandatory" value="true"/>
+          <Option type="QString" name="name" value="DrillingProgram"/>
+          <Option type="QString" name="output_name" value="OUTPUT"/>
+        </Option>
+      </Option>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="COLUMN">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="vertex_index;n;feature_x;feature_y;nearest_x;nearest_y;distance"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="qgis:fieldcalculator_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+    <Option type="Map" name="qgis:fieldcalculator_1">
+      <Option type="bool" name="active" value="true"/>
+      <Option name="alg_config"/>
+      <Option type="QString" name="alg_id" value="qgis:fieldcalculator"/>
+      <Option type="QString" name="component_description" value="Field calculator"/>
+      <Option type="double" name="component_pos_x" value="365"/>
+      <Option type="double" name="component_pos_y" value="269"/>
+      <Option name="dependencies"/>
+      <Option type="QString" name="id" value="qgis:fieldcalculator_1"/>
+      <Option name="outputs"/>
+      <Option type="bool" name="outputs_collapsed" value="true"/>
+      <Option type="bool" name="parameters_collapsed" value="true"/>
+      <Option type="Map" name="params">
+        <Option type="List" name="FIELD_LENGTH">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="10"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD_NAME">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="Seq"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD_PRECISION">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="3"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FIELD_TYPE">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="int" name="static_value" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="FORMULA">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="QString" name="static_value" value="vertex_index + 1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="INPUT">
+          <Option type="Map">
+            <Option type="QString" name="child_id" value="native:joinbynearest_1"/>
+            <Option type="QString" name="output_name" value="OUTPUT"/>
+            <Option type="int" name="source" value="1"/>
+          </Option>
+        </Option>
+        <Option type="List" name="NEW_FIELD">
+          <Option type="Map">
+            <Option type="int" name="source" value="2"/>
+            <Option type="bool" name="static_value" value="true"/>
+          </Option>
+        </Option>
+      </Option>
+    </Option>
+  </Option>
+  <Option name="help"/>
+  <Option name="modelVariables"/>
+  <Option type="QString" name="model_group" value="AKO wip"/>
+  <Option type="QString" name="model_name" value="DrillingProgram from VesselRoute"/>
+  <Option type="Map" name="parameterDefinitions">
+    <Option type="Map" name="qgis:deletecolumn_1:DrillingProgram">
+      <Option type="bool" name="create_by_default" value="true"/>
+      <Option type="int" name="data_type" value="-1"/>
+      <Option name="default"/>
+      <Option type="QString" name="description" value="DrillingProgram"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="qgis:deletecolumn_1:DrillingProgram"/>
+      <Option type="QString" name="parameter_type" value="sink"/>
+      <Option type="bool" name="supports_non_file_outputs" value="true"/>
+    </Option>
+    <Option type="Map" name="sites">
+      <Option type="List" name="data_types">
+        <Option type="int" value="0"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Sites"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="sites"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
+    </Option>
+    <Option type="Map" name="vesselroute">
+      <Option type="List" name="data_types">
+        <Option type="int" value="1"/>
+      </Option>
+      <Option type="invalid" name="default"/>
+      <Option type="QString" name="description" value="Vessel Route"/>
+      <Option type="int" name="flags" value="0"/>
+      <Option name="metadata"/>
+      <Option type="QString" name="name" value="vesselroute"/>
+      <Option type="QString" name="parameter_type" value="vector"/>
+    </Option>
+  </Option>
+  <Option type="Map" name="parameters">
+    <Option type="Map" name="sites">
+      <Option type="QString" name="component_description" value="sites"/>
+      <Option type="double" name="component_pos_x" value="117"/>
+      <Option type="double" name="component_pos_y" value="110"/>
+      <Option type="QString" name="name" value="sites"/>
+    </Option>
+    <Option type="Map" name="vesselroute">
+      <Option type="QString" name="component_description" value="vesselroute"/>
+      <Option type="double" name="component_pos_x" value="120"/>
+      <Option type="double" name="component_pos_y" value="60"/>
+      <Option type="QString" name="name" value="vesselroute"/>
+    </Option>
+  </Option>
+</Option>
